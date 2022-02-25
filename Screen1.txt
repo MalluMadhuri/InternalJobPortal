@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <style>
+.v201_384 {
+  width: 100%;
+  height: 788px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.v201_385 {
+  width: 100%;
+  height: 122px;
+  background: rgba(245,245,245,1);
+  opacity: 1;
+  position: absolute;
+  top: 119px;
+  left: 356px;
+  overflow: hidden;
+background: #F5F5F5;
+}
+.v228_302 {
+  width: 100%;
+  height: 537px;
+  background: rgba(245,245,245,1);
+  opacity: 1;
+  position: absolute;
+  top: 251px;
+  left: 356px;
+  overflow: hidden;
+}
+.v201_425 {
+  position: absolute;
+width: 344px;
+height: 669px;
+left: 0px;
+top: 119px;
+background: #F5F5F5;
+}
+.v201_386 {
+  width: 87px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 47px;
+  left: 44px;
+  overflow: hidden;
+}
+  .v201_387{
+    position: absolute;
+width: 87px;
+height: 27px;
+left: 44px;
+top: 47px;
+  }
+.v201_390 {
+  width: 303px;
+  position: absolute;
+  top: 133px;
+  left: 41px;
+  font-size: 45px;
+  opacity: 1;
+  text-align: left;
+}
+.orangeText
+{
+color:#F37221;
+}
+ .v228_303 {
+    width: 116px;
+    color: rgba(55,55,55,1);
+    position: absolute;
+    top: 152px;
+    left: 874px;
+    padding: -10%;
+    font-family: Lato;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: left;
+} 
+.v228_304{
+    width: 116px;
+    color: rgba(55,55,55,1);
+    position: absolute;
+    top: 153px;
+    left: 930px;
+    font-family: Lato;
+    font-weight: Regular;
+    font-size: 48px;
+    opacity: 1;
+    text-align: left;
+}
+.v228_305{
+  position: absolute;
+    left: 40%;
+    right: 0%;
+    top: 50%;
+    bottom: 33.33%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #373737;
+}
+.v228_306{
+  position: absolute;
+    left: 59.7%;
+    right: 0%;
+    top: 49.5%;
+    height:490%;
+    bottom: 33.33%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #373737;
+}
+.v228_307{
+  position: absolute;
+    left: 40%;
+    right: 0%;
+    top: 59%;
+    bottom: 33.33%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #373737;
+}
+.v228_308{
+  position: absolute;
+    left: 56.5%;
+    right: 0%;
+    top: 58.5%;
+    bottom: 33.33%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #373737;
+}
+.v228_309{
+  position:relative;
+top:73%;
+left:50%;
+}
+ input[type=button]{
+   width:6%;
+   height:5%;
+   background: #F37221;;
+   color:#F5F5F5;;
+   border:none;
+   padding:10px;
+   font-size: 24px;
+   border-radius:5px;
+ }
+</style>
+  <body>
+    <div class="v201_384">
+    <div class="v201_385"></div>
+    <div class=" v228_302"></div>
+    <div class="v201_425"></div>
+    <div class="v201_386"></div>
+    <div class="v201_387">
+      <img src="assets/ari-logo-90 1.png" alt="logo">
+        </div>
+    <div class="v201_390">MY <br><span class="orangeText">DASHBOARD</span></div>
+     <div class="v228_303">
+       <img src="assets/MicrosoftTeams-image (1).png"
+       width="50" 
+       height="50">
+     </div> 
+ <div class="v228_304">Smart&nbsp;Resume&nbsp;Ranker</div>
+ <div class="v228_305">Upload A Job Description:</div>   
+ <div class="v228_306">
+   <input type="file">
+ </div>
+ <div class="v228_307">Upload Resume Files:</div>
+ <div class="v228_308">
+  <input type="file">
+</div>
+<div class="v228_309">
+ <input type="button" value="Submit"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+Historyscreen:
+
+HTML:
+
+<html>
+
+<head> 
+<link rel="stylesheet"  href="./app.component.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="topsection">
+        <label style="color: #F69659;margin-left: 900px; text-align: end;font-size: 20px;">Welcome Raj !</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <label style="font-size: 20px; color: #F69659;">Logout</label>
+        <div class="image"><br><br>Internal Jobs </div>
+    </div>
+<div class="LeftPanel">
+    <h1 style="margin-left: 40px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">MY <br>
+      <label style="color: #F69659;">DASHBOARD</label></h1>
+    <div class="LeftPanelOptions">
+
+    <br><label style="font-family: -apple-system; BlinkMacSystemFont,'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">HOME</label><br><br>
+    <br><label style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">MY PROFILE</label><br><br>
+    <br><label style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> MY INTERVIEWS</label><br><br>
+    <br><label style="color:#18A0FB;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >HISTORY</label><br>
+       
+    </div>
+<hr style="width: 180px; margin-right: 110px; margin-top: 100px;border:none;background-color:#F69659; height: 1px;">
+<br><br>
+
+<label style="margin-left: 25px;">NEED HELP ?</label>  <br><br>
+
+<i class='fas fa-phone' style='font-size:15px;color:#F69659;margin-left:30px ;'></i>
+
+<label style="margin-left: 10px;">+91 1234567890</label>  <br><br>
+
+<i class="fa fa-envelope" style="font-size:15px;color:#F69659;margin-left: 30px;"></i>
+<label style="margin-left: 10px;">help@arigs.com</label>  <br><br>
+
+</div>
+
+<div class="JobSearch"><br>
+  <label> SEARCH</label><br><br>
+  <input type="myInput"type="text"placeholder="Search by Keyword"class="form-control">
+ 
+    
+  </table>  -->
+ <!-- <input type="search"  placeholder="Search by Keyword" ><i style="font-size:15px;margin-left: -1.3em;" class="fa">&#xf002;</i>   -->
+<input id="table1" type="search"  placeholder="Search by Date"><i style="font-size:15px;margin-left: -1.3em;" class="fa">&#xf002;</i> 
+
+<input type="search" placeholder="Search by Reporting Manager "><i style="font-size:15px;margin-left: -1.3em;" class="fa">&#xf002;</i> 
+
+<input type="button" value="SEARCH">
+</div>
+
+<div class="BodySection"><br>
+
+    <label style="font-weight:normal; margin-left: 11px;margin-top: 7px;"></label>
+    
+</div>
+ 
+
+<div id="all" class="tabcontent">
+<div class="names">
+ <table id="table1">
+  <tr style="background-color:#f5f5f5;">&nbsp;&nbsp;&nbsp;&nbsp;<th>Job Postings</th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>Date of Job Posting</th></tr><br>
+  <tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td> Java Developer Position</td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>1 January 2022</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr><br>
+  <tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>Python Developer</td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>29 December 2021</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr><br>
+  <tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>Sales Force</td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>1 January 2022</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr><br>
+  <tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td> Java Developer Position</td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>1 January 2022</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr><br>
+  <tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>Java Developer Position</td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>1 January 2022</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr><br>
+</table> 
+
+</div>
+</div>  
+
+</body>
+</html>
+
+CSS:
+.h1
+  {
+    font-weight: 500;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 150px;
+    text-align: center;
+  }
+  .LeftPanel
+  {
+    margin-top: 8px;
+    background-color: #f5f5f5;
+    height: 750px;
+    width: 300px;
+  }
+  .LeftPanelOptions
+  {
+    padding-top: 60px;
+    padding-left: 100px;
+    padding-right: 20px;
+    font-weight: 500;
+    text-align: right;
+    font-size: 20px;
+  }
+    .JobSearch
+  {
+    background-color: #F5F5F5;
+    height: 8.8em;
+    width: 1020px;
+    margin-top:-47em;
+    margin-left: 305px;
+  }
+  .JobSearch label
+  {
+    margin-left: 10px;
+    font-family: Lato;
+    font-size: 20px;
+  }
+  .JobSearch input[type=search]
+  {
+    float:inline-start;
+    height: 40px;
+    width: 230px;
+    text-align: center;
+    margin-left: 35px;
+  }
+  .JobSearch input::placeholder
+  {
+    font-size: 15px;
+  }
+  .JobSearch input[type=button]
+  {
+    height: 30px;
+    width: 100px;
+    margin-left: 40px;
+    border: 1px solid;
+    border-radius: 2.5em;
+    cursor: pointer;
+  }
+ 
+.topsection
+{
+  background-color:white;
+  height: 70px;
+  width:1325px;
+  margin-top:30px;
+ 
+}
+.image
+{
+  height: 15em;
+  width: 15em;
+  background-color: #F69659;
+  background: url("src\assets\ari-logo-90 1.png");
+  margin-top: -3em;
+  background-repeat: no-repeat;
+} 
+.BodySection
+{
+  height: 610px;
+  width:1018px;
+  background-color:#F5F5F5;
+  margin-top: 5px;
+  margin-left: 305px;
+}
+
+
+/* Style the tab content */
+ .tabcontent {
+  padding: 6px 100px;
+  border:none;
+ 
+  border-top: none;
+  background-color: #F5F5F5;
+}  
+#table1
+{
+   border-spacing: 0px;
+  
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+ #table1 tr,#table1 th,#table1 td{
+  text-align:center;
+} 
+ #table1 th{
+  width:9em;
+  font-size: 15px;
+  font-weight: 550;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+ #table1 tr:nth-child(n+1)
+{
+  background-color: white;
+} 
+
+#table1 tr{
+  height: 45px;
+}
+

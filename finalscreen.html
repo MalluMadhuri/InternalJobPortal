@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+border: 1px solid white;
+border-collapse: collapse;
+
+}
+th{
+background-color: #F37221;
+}
+
+tr:nth-child(even) {
+text-align: center;
+            background-color: Lightgreen;
+        }
+tr:nth-child(odd) {
+text-align: center;
+            background-color: #F5F5F5;
+        }
+
+
+body {
+font-size: 14px;
+}
+.v201_384 {
+width: 100%;
+height: 788px;
+background: rgba(255,255,255,1);
+opacity: 1;
+position: relative;
+top: 0px;
+left: 0px;
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+overflow: hidden;
+}
+.v201_385 {
+width: 100%;
+height: 122px;
+background: rgba(245,245,245,1);
+opacity: 1;
+position: absolute;
+top: 119px;
+left: 356px;
+overflow: hidden;
+background: #F5F5F5;
+}
+.v228_302 {
+width: 100%;
+height: 537px;
+background: rgba(245,245,245,1);
+opacity: 1;
+position: absolute;
+top: 251px;
+left: 356px;
+overflow: hidden;
+}
+.v201_425 {
+position: absolute;
+width: 344px;
+height: 669px;
+left: 0px;
+top: 119px;
+background: #F5F5F5;
+}
+.v201_386 {
+width: 87px;
+height: 27px;
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+opacity: 1;
+position: absolute;
+top: 47px;
+left: 44px;
+overflow: hidden;
+}
+.image{
+position: absolute;
+width: 87px;
+height: 27px;
+left: 44px;
+top: 47px;
+}
+.v201_390 {
+width: 303px;
+position: absolute;
+top: 133px;
+left: 41px;
+font-size: 45px;
+opacity: 1;
+text-align: left;
+}
+.orangeText
+{
+color:#F37221;
+}
+.v228_303 {
+width: 116px;
+color: rgba(55,55,55,1);
+position: absolute;
+top: 155px;
+left: 570px;
+padding: -10%;
+font-family: Lato;
+font-weight: Regular;
+font-size: 18px;
+opacity: 1;
+text-align: left;
+}
+.v228_304{
+width: 116px;
+color: rgba(55,55,55,1);
+position: absolute;
+top: 153px;
+left: 630px;
+font-family: Lato;
+font-weight: Regular;
+font-size: 48px;
+opacity: 1;
+text-align: left;
+}
+.v228_305{
+position: relative;
+left:50%;
+top:90%;
+}
+button{
+position:absolute;
+height:50px;
+background:#F37221;
+font-size:24px;
+color:#F5F5F5;
+width:13%;}
+
+.v228_306{
+width: 303px;
+position: absolute;
+top: 85%;
+left: 5%;
+font-size: 24px;
+opacity: 1;
+text-align: left;
+color: #18A0FB;
+}
+thead{
+width: 50%;
+align: center;
+}
+</style>
+<script>
+function downloadCSV(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    // CSV file
+    csvFile = new Blob([csv], {type: "text/csv"});
+
+    // Download link
+    downloadLink = document.createElement("a");
+
+    // File name
+    downloadLink.download = filename;
+
+    // Create a link to the file
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+
+    // Hide download link
+    downloadLink.style.display = "none";
+
+    // Add the link to DOM
+    document.body.appendChild(downloadLink);
+
+    // Click download link
+    downloadLink.click();
+}
+
+function exportTableToCSV(filename) {
+    var csv = [];
+    var rows = document.querySelectorAll("table tr");
+    
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll("td, th");
+        
+        for (var j = 0; j < cols.length; j++) 
+            row.push(cols[j].innerText);
+        
+        csv.push(row.join(","));        
+    }
+
+    // Download CSV file
+    downloadCSV(csv.join("\n"), filename);
+}
+</script>
+
+<body>
+<div class="v201_384">
+<div class="v201_385"></div>
+<div class=" v228_302">
+<table  style="width:80%"; align:"left"; ;margin:"auto";background-color:"#d6ffff">
+<thead>
+<tr>
+
+<th>SR.NO</th>
+
+<th>CANDIDATE RESUME</th>
+
+<th>PERCENTAGE</th>
+
+</tr>
+</thead>
+    <tr>
+        <td "colspan=3 ; width:100%; left:50%; top:40%;">
+            
+        </td>
+    </tr>
+    {% for item in result %}
+    <tr>
+        <td align = "center">{{ loop.index }}</td>
+        <td> {{  item[0] }} </td>
+        <td> {{ item[1] }} </td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+<div class="v201_425"></div>
+<div class="v201_386"></div>
+<div class="image">
+<img src="static/logo.png" alt="logo">
+</div>
+<div class="v201_390">MY <br><span class="orangeText">DASHBOARD</span></div>
+<div class="v228_303">
+<img src="static/Rank_image.jpg"
+width="50"
+height="50">
+    </div>
+<div class="v228_304">Resume&nbsp;Ranking&nbsp;According&nbsp;To&nbsp;The&nbsp;Percentage&nbsp;Match</div>
+
+<div class="v228_306">
+<a href="/" class="back">&laquo; Back to home page</a>
+</div>
+<div class="v228_305">
+<button onclick="exportTableToCSV('members.csv')">Download Report </button>
+</div>
+</div>
+</body>
+</html>
+

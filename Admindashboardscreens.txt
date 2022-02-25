@@ -1,0 +1,554 @@
+Admin Dashboard Screen:
+
+HTML:
+
+<html>
+ <head>
+<link rel="stylesheet"  href="./app.component.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <div class="topsection">
+    <label style="color: #F69659;margin-left: 900px; text-align: end;font-size: 20px;">Welcome Raj !</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <label style="font-size: 20px; color: #F69659;">Logout</label>
+       <div class="image">
+       <br><br>
+       Internal Jobs
+    </div>  
+    <div class="vectorimage">
+      <br><br>
+     
+   </div> 
+</div>
+<div class="LeftPanel">
+<h1 style="margin-left: 40px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">MY <br>
+  <label style="color: #F69659;">DASHBOARD</label></h1>
+<div class="LeftPanelOptions">
+
+<br><label style="color:#18A0FB;"routerlink="/home">HOME</label><br><br>
+<br><label style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >HISTORY</label><br><br>
+
+
+</div>
+<hr style="width: 180px; margin-right: 110px; margin-top: 100px;border:none;background-color:#F69659; height: 1px;">
+  <br><br>
+ 
+<br><br><br><br>
+<div class="vectorimage">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WWW.ARIJOBS.COM</div>
+ 
+</div>
+<div class="JobSearch"><br>
+  <label>SEARCH</label><br><br>
+  <!-- <input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search Jobs by Keyword">
+<input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search Applicant by name"> -->
+<input type="search" class="myInput" onkeyup="setFilter(this, 1)" placeholder="Search Jobs by Keyword" title="Search Jobs by Keyword">
+<input type="search" class="myInput" onkeyup="setFilter(this, 3)" placeholder="Search by Reporting Manager" title="Search by Reporting Manager">
+
+<input type="button" value="SEARCH">
+</div>
+<div class="BodySection"><br>
+  <label style="font-weight:normal; margin-left: 11px;margin-top: 7px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight: 500;
+  ">INTERNAL JOB POSTINGS </label>
+<div class="tab">
+<button class="tablinks" onclick="
+  document.getElementById('all').style.display='block';document.getElementById('saved').style.display='none';document.getElementById('new').style.display='none';document.getElementById('applied').style.display='none';document.getElementById('search results').style.display='none'; ">ALL</button>
+
+<button class="tablinks" onclick=" 
+document.getElementById('new').style.display='block';document.getElementById('all').style.display='none';document.getElementById('saved').style.display='none';document.getElementById('applied').style.display='none';document.getElementById('search results').style.display='none'; ">NEW</button>
+
+<button class="tablinks" onclick="
+document.getElementById('saved').style.display='block';document.getElementById('all').style.display='none';document.getElementById('new').style.display='none';document.getElementById('applied').style.display='none';document.getElementById('search results').style.display='none'; ">DRAFT</button>
+ <button class="tablinks" onclick="
+ document.getElementById('saved').style.display='none';document.getElementById('all').style.display='none';document.getElementById('new').style.display='none';document.getElementById('applied').style.display='block';document.getElementById('search results').style.display='none'; ">INTERVIEW SCHEDULED</button>
+
+ <button class="tablinks" onclick="
+ document.getElementById('saved').style.display='none';document.getElementById('all').style.display='none';document.getElementById('new').style.display='none';document.getElementById('applied').style.display='none';document.getElementById('search results').style.display='block'; ">SEARCH RESULTS</button>
+
+</div>
+<div id="all" class="tabcontent">
+ 
+<table id="myTable">
+ 
+  <tr style="background-color:#f5f5f5;"><th>TENURE</th><th>TITLE</th><th>JOB TYPE</th><th><br>REPORTING MANAGER</th><th><br>EXP.<br>(IN YEARS)</th><th>DATE</th><th>STATUS</th><th><input id="postjob" type="button" value="POST JOB"></th></tr>
+  <br><br> <tr><td>Permanent</td><td>Java dev</td><td>Elite</td><td>Vikas S.R </td><td>5</td><td>DD/MM/YYYY</td><td>Applied</td>      
+  <td> <select name="town" id="Draft">
+          <option value="Jobs"> </option>
+          <option value="update job">Update Job</option>
+          <option value="update job">Duplicate Job</option>
+          <option value="delete job">Delete Job</option>
+        </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+       </tr><br>
+        <tr><td>Freelance</td><td>Angular Dev.</td><td>Elite</td><td>Nandini P </td><td>4</td><td>DD/MM/YYYY</td><td>Applied</td>
+          <td> <select name="town" id="Draft">
+            <option value="Jobs"> </option>
+            <option value="update job">Update Job</option>
+            <option value="update job">Duplicate Job</option>
+            <option value="delete job">Delete Job</option>
+          </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+         </tr><br>
+        <tr><td>Permanent</td><td>Fultter Dev</td><td>Elite</td><td>Nav K </td><td>10</td><td>DD/MM/YYYY</td><td>Applied</td>
+          <td> <select name="town" id="Draft">
+            <option value="Jobs"> </option>
+            <option value="update job">Update Job</option>
+            <option value="update job">Duplicate Job</option>
+            <option value="delete job">Delete Job</option>
+          </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+         </tr><br>
+        <tr><td>Freelance</td><td>Python Dev</td><td>Elite</td><td>Vikas S.R </td><td>4</td><td>DD/MM/YYYY</td><td>Applied</td>
+          <td> <select name="town" id="Draft">
+            <option value="Jobs"> </option>
+            <option value="update job">Update Job</option>
+            <option value="update job">Duplicate Job</option>
+            <option value="delete job">Delete Job</option>
+          </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+          </tr><br>
+        <tr><td>Internship</td><td>UI/UX</td><td>Elite</td><td>Nav K </td><td>0-1</td><td>DD/MM/YYYY</td><td>Applied</td>
+          <td> <select name="town" id="Draft">
+            <option value="Jobs"> </option>
+            <option value="update job">Update Job</option>
+            <option value="update job">Duplicate Job</option>
+            <option value="delete job">Delete Job</option>
+          </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+         </tr><br>
+        </table>
+     
+    </div>
+  
+      
+      <div id="new" class="tabcontent" style="display:none;">
+        <table id="myTable"> 
+         
+          <tr style="background-color:#f5f5f5;"><th>TENURE</th><th>TITLE</th><th>JOB TYPE</th><th><br>REPORTING MANAGER</th><th><br>EXP.<br>(IN YEARS)</th><th>DATE</th><th>STATUS</th><th><input id="postjob" type="button" value="POST JOB"></th></tr>
+         <br><br> <tr><td>Permanent</td><td>Java dev</td><td>Elite</td><td>Vikas S.R </td><td>5</td><td>DD/MM/YYYY</td><td>Applied</td>
+          <td> <select name="town" id="Draft">
+            <option value="Jobs"> </option>
+            <option value="update job">Update Job</option>
+            <option value="update job">Duplicate Job</option>
+            <option value="delete job">Delete Job</option>
+          </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+         </tr><br>
+          <tr><td>Permanent</td><td>Fultter Dev</td><td>Elite</td><td>Nav K </td><td>10</td><td>DD/MM/YYYY</td><td>Applied</td>
+            <td> <select name="town" id="Draft">
+              <option value="Jobs"> </option>
+              <option value="update job">Update Job</option>
+              <option value="update job">Duplicate Job</option>
+              <option value="delete job">Delete Job</option>
+            </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+           </tr><br>
+          <tr><td>Internship</td><td>UI/UX</td><td>Elite</td><td>Nav K </td><td>0-1</td><td>DD/MM/YYYY</td><td>Applied</td>
+            <td> <select name="town" id="Draft">
+              <option value="Jobs"> </option>
+              <option value="update job">Update Job</option>
+              <option value="update job">Duplicate Job</option>
+              <option value="delete job">Delete Job</option>
+            </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+            </tr><br>
+         
+        </table>
+      </div>
+      <div id="saved" class="tabcontent" style="display:none;">
+        <table id="myTable">
+          <tr style="background-color:#f5f5f5;"><th>TENURE</th><th>TITLE</th><th>JOB TYPE</th><th><br>REPORTING MANAGER</th><th><br>EXP.<br>(IN YEARS)</th><th>DATE</th><th>STATUS</th><th><input id="postjob" type="button" value="POST JOB"></th></tr>
+         <br><br> <tr><td>Permanent</td><td>Java dev</td><td>Elite</td><td>Vikas S.R </td><td>5</td><td>DD/MM/YYYY</td><td>Applied</td>
+          <td> <select name="town" id="Draft">
+            <option value="Jobs"> </option>
+            <option value="update job">Update Job</option>
+            <option value="update job">Duplicate Job</option>
+            <option value="delete job">Delete Job</option>
+          </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+         </tr><br>
+          <tr><td>Freelance</td><td>Angular Dev.</td><td>Elite</td><td>Nandini P </td><td>4</td><td>DD/MM/YYYY</td><td>Applied</td>
+            <td> <select name="town" id="Draft">
+              <option value="Jobs"> </option>
+              <option value="update job">Update Job</option>
+              <option value="update job">Duplicate Job</option>
+              <option value="delete job">Delete Job</option>
+            </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+           </tr><br>
+          <tr><td>Permanent</td><td>Fultter Dev</td><td>Elite</td><td>Nav K </td><td>10</td><td>DD/MM/YYYY</td><td>Applied</td>
+            <td> <select name="town" id="Draft">
+              <option value="Jobs"> </option>
+              <option value="update job">Update Job</option>
+              <option value="update job">Duplicate Job</option>
+              <option value="delete job">Delete Job</option>
+            </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+            <td>
+              </tr><br>
+        </table>
+      </div>
+      <div id="applied" class="tabcontent" style="display:none;">
+        <table id="myTable">
+          <tr style="background-color:#f5f5f5;"><th>TENURE</th><th>TITLE</th><th>JOB TYPE</th><th><br>REPORTING MANAGER</th><th><br>EXP.<br>(IN YEARS)</th><th>DATE</th><th>STATUS</th><th><input id="postjob" type="button" value="POST JOB"></th></tr>
+         <br><br> <tr><td>Permanent</td><td>Java dev</td><td>Elite</td><td>Vikas S.R </td><td>5</td><td>DD/MM/YYYY</td><td>Applied</td>
+          <td> <select name="town" id="Draft">
+            <option value="Jobs"> </option>
+            <option value="update job">Update Job</option>
+            <option value="update job">Duplicate Job</option>
+            <option value="delete job">Delete Job</option>
+          </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+          </tr>
+        </table>
+      </div>
+      <div id="search results" class="tabcontent" style="display:none;">
+        <table id="myTable">
+          <tr style="background-color:#f5f5f5;"><th>TENURE</th><th>TITLE</th><th>JOB TYPE</th><th><br>REPORTING MANAGER</th><th><br>EXP.<br>(IN YEARS)</th><th>DATE</th><th>STATUS</th><th><input id="postjob" type="button" value="POST JOB"></th></tr>
+         <br><br> <tr><td>Permanent</td><td>Java dev</td><td>Elite</td><td>Vikas S.R </td><td>5</td><td>DD/MM/YYYY</td><td>Applied</td>
+          <td> <select name="town" id="Draft">
+            <option value="Jobs"> </option>
+            <option value="update job">Update Job</option>
+            <option value="update job">Duplicate Job</option>
+            <option value="delete job">Delete Job</option>
+          </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+         </tr><br>
+          <tr><td>Freelance</td><td>Angular Dev.</td><td>Elite</td><td>Nandini P </td><td>4</td><td>DD/MM/YYYY</td><td>Applied</td>
+            <td> <select name="town" id="Draft">
+              <option value="Jobs"> </option>
+              <option value="update job">Update Job</option>
+              <option value="update job">Duplicate Job</option>
+              <option value="delete job">Delete Job</option>
+            </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+           </tr><br>
+       
+          <tr><td>Permanent</td><td>Fultter Dev</td><td>Elite</td><td>Nav K </td><td>10</td><td>DD/MM/YYYY</td><td>Applied</td>
+            <td> <select name="town" id="Draft">
+              <option value="Jobs"> </option>
+              <option value="update job">Update Job</option>
+              <option value="update job">Duplicate Job</option>
+              <option value="delete job">Delete Job</option>
+            </select> </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+           </tr><br>
+          <tr><td>Freelance</td><td>Python Dev</td><td>Elite</td><td>Vikas S.R </td><td>4</td><td>DD/MM/YYYY</td><td>Applied</td>
+            <td>  <select name="town" id="Draft"onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+              <option value=""></option>
+              <option value="Updatejobscreen">Update job</option>
+              <option value="">Delete Job</option>
+              <option value="" >Duplicate Job</option>
+  </select> 
+
+               </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-eye"></i></button></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button style="margin-top: 5px;border-radius: 50%;"><i class="fa fa-address-book-o"></i></button></td>
+            </tr><br>
+        </table>
+    
+      </div>
+    </div>
+   
+    </body>
+    </html>
+
+CSS:
+
+.h1
+  {
+    font-weight: 500;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 150px;
+    text-align: center;
+  }
+  .LeftPanel
+  {
+    margin-top: 8px;
+    background-color: #f5f5f5;
+    height: 750px;
+    width: 300px;
+  }
+ 
+  .vectorimage
+{
+  height: 15em;
+width: 15em;
+background-color: #F69659;
+color: #18A0FB;
+margin-left:70px;
+  background: url("src\assets\vector (2).png");  
+margin-top: -2.5em;
+
+background-repeat: no-repeat;
+}   
+  .LeftPanelOptions
+  {
+    padding-top: 60px;
+    padding-left: 100px;
+    padding-right: 20px;
+    font-weight: 500;
+    text-align: right;
+    font-size: 20px;
+  }
+    .JobSearch
+  {
+    background-color: #F5F5F5;
+    height: 8.8em;
+    width: 1020px;
+    margin-top:-47em;
+    margin-left: 305px;
+  }
+  .JobSearch label
+  {
+    margin-left: 10px;
+    font-family: Lato;
+    font-size: 20px;
+  }
+  .JobSearch input[type=search]
+  {
+    float:inline-start;
+    height: 40px;
+    width: 230px;
+    text-align: center;
+    margin-left: 35px;
+  }
+  
+  .JobSearch input::placeholder
+  {
+    font-size: 15px;
+  }
+
+  .JobSearch input[type=button]
+  {
+    height: 30px;
+    width: 100px;
+    margin-left: 300px;
+    border: 1px solid;
+    border-radius: 2.5em;
+    cursor: pointer;
+  }
+ 
+.topsection
+{
+  background-color:white;
+  height: 70px;
+  width:1325px;
+  margin-top:30px;
+ 
+}
+  .image
+{
+  height: 15em;
+  width: 15em;
+  background-color: #F69659;
+    background: url("src\assets\ari-logo-90 1.png");  
+  margin-top: -3em;
+  background-repeat: no-repeat;
+}   
+.BodySection
+{
+  height: 610px;
+  width:1018px;
+  background-color:#F5F5F5;
+  margin-top: 5px;
+  margin-left: 305px;
+}
+.jobupdates input[type=button]{
+  height: 30px;
+  width: 100px;
+  margin-top:60%;
+  margin-left: 40px;
+  color: #F69659;
+  border: 1px solid;
+  border-radius: 2.5em;
+  cursor: pointer;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: none;
+  background-color:#F5F5F5;
+  margin-left: 180px;
+  margin-top: -28px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float:none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 12px;
+  margin-left: 65px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button .active {
+  background-color:#ddd;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 6px 12px;
+  border:none;
+  border-top: none;
+  background-color: #F5F5F5;
+}
+/* 
+#table1
+{
+   border-spacing: 0px;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+ #table1 tr,#table1 th,#table1 td{
+  text-align:center;
+}
+#table1 th{
+  width:9em;
+  font-size: 15px;
+  font-weight: 550;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ #table1 tr:nth-child(n+1)
+{
+  background-color: white;
+}
+ 
+#table1 tr{
+  height: 45px;
+} */
+
+#Draft
+{
+  background: none;
+  border: none;
+  outline: none;
+ 
+}
+#myTable input[type=button]{
+  border: 1px solid;
+  border:none;
+  width:100px;
+  height:35px;
+   color: #f5f5f5;
+   background-color: #F69659;
+   margin-left:80%;
+   border-radius: 2.5em;
+}
+ 
+  
+  #myTable {
+    border-spacing: 0px;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+  
+  #myTable th{
+  width:9em;
+  font-size: 15px;
+  font-weight: 550;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  #myTable tr {
+    height: 45px;
+  }
+  #myTable tr:nth-child(n+1)
+  {
+    background-color: white;
+  }
+ #myTable tr,#myTable th,#myTable td{
+  text-align:center;
+}
+  
+
+component.ts:
+
+import { Component } from '@angular/core';
+// declare const myFunction:any;
+declare const filterTable:any;
+
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'searchusingjavascript';
+  onClick(){
+    // myFunction();
+    filterTable();
+    
+    
+  }
+}
+
+
+script.js:
+
+let filters = ["",""];
+
+function setFilter(thisInput, thisIndex) {
+  filters[thisIndex] = thisInput.value.toUpperCase();
+  
+  filterTable();
+}
+
+function filterTable() {
+  var table = document.getElementById("myTable");
+  var rows = Object.values(table.getElementsByTagName("tr"));
+  
+  for(var rowItr=1; rowItr < rows.length; rowItr++) {
+    var row = rows[rowItr];
+    var cells = Object.values(row.getElementsByTagName("td"));
+    
+    
+    var isRowVisible = filters.every((filter, filterIndex) => {
+        var cell = cells[filterIndex];
+        var txtValue = cell.textContent || cell.innerText;
+
+        return filter === "" || txtValue.toUpperCase().indexOf(filter) > -1;
+    });
+    
+    row.style.display = isRowVisible ? "" : "none";
+  };
+}
+
+
+angular.json:
+
+"scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/script.js"
+            ]
+
+  
+
+
